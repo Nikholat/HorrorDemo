@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip soundToUnlockDoor;
     [SerializeField] private AudioClip openDoor;
     [SerializeField] private AudioClip jumpscare;
+    [SerializeField] private AudioClip notification;
 
     void Start()
     {
@@ -41,5 +42,10 @@ public class SoundManager : MonoBehaviour
     public void Jumpscare()
     {
         audioSource.PlayOneShot(jumpscare);
+    }
+
+    public void Notification()
+    {
+        audioSource.PlayOneShot(notification);
     }
 }

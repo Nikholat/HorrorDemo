@@ -8,8 +8,8 @@ public class ScreamTrigger : MonoBehaviour
     [SerializeField] private ScreamStarter screamStarter;
     [SerializeField] private GameObject screamerTrigger;
     [SerializeField] private SoundManager soundManager;
-    [SerializeField] private EndAppearance end;
     [SerializeField] private MainMusic mainMusic;
+    [SerializeField] private Notification notification;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +18,7 @@ public class ScreamTrigger : MonoBehaviour
             screamStarter.StartScream();
             soundManager.Jumpscare();
             mainMusic.SecondStop();
-            end.Appear();
+            notification.Enable();
         }
     }
 
